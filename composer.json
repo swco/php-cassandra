@@ -8,6 +8,6 @@
     "suggest": {
     },
     "autoload": {
-        "psr-0": { "Cassandra": "lib/" }
+        "psr-0": { "Cassandra": "lib" }
     }
 }

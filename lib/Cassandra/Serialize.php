@@ -1,5 +1,4 @@
 <?php
-
 namespace Cassandra;
 
 /**
@@ -13,7 +12,7 @@ class Serialize
    * @param string $value
    * @return string
    */
-  public function string($value) {
+  public static function string($value) {
     return pack('n', strlen($value)) . $value;
   }
 
@@ -23,7 +22,7 @@ class Serialize
    * @param array $values
    * @return string
    */
-  public function stringList($values) {
+  public static function stringList($values) {
     $output = pack('n', count($values));
     foreach ($values as $name => $value) {
       $output .= Serialize::string($name);
